@@ -33,6 +33,11 @@ $breakpoint arguments:
 - tab-port
 - tab-land
 - big-desk
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px;
+
 */
 
 @mixin respond($breakpoint) {
@@ -46,6 +51,6 @@ $breakpoint arguments:
     @media (max-width: 75rem) { @content }; //1200px
   }
   @if $breakpoint == big-desk {
-    @media (max-width: 112.5rem) { @content }; //1800px
+    @media (min-width: 112.5rem) { @content }; //1800px
   }
 }

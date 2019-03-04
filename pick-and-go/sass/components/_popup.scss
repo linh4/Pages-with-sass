@@ -26,6 +26,15 @@
   &__left {
     width: 33.33333%;
     display: table-cell;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+      height: 20rem;
+    }
+    @include respond(phone) {
+      height: 15rem;
+    }
   }
 
   &__right {
@@ -33,11 +42,30 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+    }
   }
 
   &__img {
     display: block;
     width: 101%;
+
+    @include respond(tab-port) {
+      width: 50%;
+      display: block;
+      float: left;
+    }
+
+    &:last-child {
+      margin-top: -7px;
+
+      @include respond(phone) {
+        margin-top: -5px;
+      }
+    }
   }
 
   &__text {
@@ -49,6 +77,10 @@
     column-rule: 1px solid $color-grey-light-2;
 
     hyphens: auto;
+
+    @include respond(tab-port) {
+      column-count: 1;
+    }
   }
 
   // OPEN STATES

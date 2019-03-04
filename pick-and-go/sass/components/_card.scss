@@ -10,6 +10,7 @@
     transition: all .8s ease;
     @include absPosition;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
@@ -152,7 +153,9 @@
 
 
 
-  @include respond(tab-port) {
+  // @include respond(tab-port) {
+  @media only screen and (max-width: 56.25rem),
+        only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
